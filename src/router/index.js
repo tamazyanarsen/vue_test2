@@ -7,13 +7,13 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/',
-        name: 'Dialogs',
-        component: Dialogs
+        redirect: '/all'
     },
     {
         path: '/:id',
         name: 'Dialogs',
-        component: () => import('../views/Dialogs')
+        component: Dialogs,
+        // component: () => import('../views/Dialogs')
     }
 ];
 

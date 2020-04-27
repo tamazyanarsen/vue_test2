@@ -1,9 +1,8 @@
-import { getRandomNumber } from "@/utils/utils";
-
 export class Message {
-    constructor(text = '', done = false) {
+    constructor(id = new Date().getTime(), author = '', created = new Date(), text = '') {
+        this.id = id;
+        this.author = author;
+        this.created = created;
         this.text = String(text);
-        this.done = Boolean(done);
-        this.id = new Date().getTime().toString() + getRandomNumber();
     }
 }

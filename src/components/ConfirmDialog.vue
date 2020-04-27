@@ -3,7 +3,7 @@
 </template>
 
 <script>
-    import Confirm from "@/components/Dialog";
+    import Confirm from "./ModalWindow";
 
     export default {
         name: "ConfirmDialog",

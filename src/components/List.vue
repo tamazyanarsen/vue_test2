@@ -1,9 +1,10 @@
 <template>
     <div>
-        <div v-for="item in items"
-             :key="item.id">
+        <div v-for="(item, index) in items"
+             :key="item.id" class="list-item">
             <slot name="item-template"
-                  :item="item"/>
+                  :item="item"
+                  :index="index"/>
         </div>
     </div>
 </template>

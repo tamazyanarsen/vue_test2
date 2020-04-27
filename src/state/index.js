@@ -59,8 +59,11 @@ export const Store = new Vuex.Store({
             ]
         },
         mutations: {
-            addDialog(state) {
-                state.messages.push()
+            addDialog(state, newDialog) {
+                state.messages.push(newDialog);
+            },
+            addMessage(state, newMsg) {
+                state.messages.find(e => e.id === newMsg.dialogId).parts.push(newMsg.newMsg);
             }
         }
     })
